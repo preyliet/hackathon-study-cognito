@@ -2,27 +2,58 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Study Cognito</title>
   <link rel="stylesheet" href="style.css" />
 </head>
 <body>
-  <div class="container">
-    <h1>Study Cognito</h1>
-    <p>An AI-powered study planner built for hackers.</p>
 
-    <label>Hacker Goal</label>
-    <input type="text" id="goal" placeholder="e.g. Web Security, Backend APIs, CTF Basics" />
+  <div class="app">
+    <aside class="sidebar">
+      <h2>Study Cognito</h2>
+      <p class="tagline">AI study planner for hackers</p>
 
-    <label>Hours per day</label>
-    <input type="number" id="hours" placeholder="e.g. 3" />
+      <label>Hacker Goal</label>
+      <input id="goal" placeholder="Web Security, CTFs, Backend APIs" />
 
-    <label>Planning duration (days)</label>
-    <input type="number" id="days" placeholder="e.g. 7" />
+      <label>Hours / Day</label>
+      <input id="hours" type="number" placeholder="3" />
 
-    <button onclick="generatePlan()">Generate Hacker Plan</button>
+      <label>Duration (Days)</label>
+      <input id="days" type="number" placeholder="7" />
 
-    <div id="output"></div>
+      <button onclick="generatePlan()">Generate Plan</button>
+    </aside>
+
+    <main class="main">
+      <section class="dashboard">
+        <div class="card">
+          <h3>Focus Area</h3>
+          <p id="focusText">Not generated yet</p>
+        </div>
+        <div class="card">
+          <h3>Daily Commitment</h3>
+          <p id="hoursText">—</p>
+        </div>
+        <div class="card">
+          <h3>Plan Length</h3>
+          <p id="daysText">—</p>
+        </div>
+      </section>
+
+      <section class="content">
+        <div class="plan">
+          <h2>Generated Study Plan</h2>
+          <div id="output" class="output">
+            <em>Your personalized hacker roadmap will appear here.</em>
+          </div>
+        </div>
+
+        <div class="calendar">
+          <h2>Schedule Overview</h2>
+          <div id="calendarGrid" class="calendar-grid"></div>
+        </div>
+      </section>
+    </main>
   </div>
 
   <script src="script.js"></script>

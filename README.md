@@ -1,4 +1,4 @@
-# Hackathon- Study Cognito
+# Hackathon - Study Cognito
 
 Study Cognito is a study planner built for hackers and developers who want structure while learning technical skills.
 
